@@ -4,9 +4,31 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>보담</title>
+<script src="js/jquery.js"></script>
+<link rel="stylesheet" href="css/menubarcss.css" />
+<link rel="stylesheet" href="assets/css/mainmenu.css" />
+<link rel="stylesheet" href="css/what.css" />
+<script src="js/menubar.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+  <script src="js/mainboot.js"></script>
+  <script src="js/pwstrength.js"></script>
+  <link rel="stylesheet" href="css/mainboot.css">
+  <link rel="stylesheet" href="css/mainCustom.css">
+<script src="js/mainCustom.js"></script>
 </head>
 <body>
-
+<div id="main_header">
+		<jsp:include page="/header.jsp" flush="false" />
+	</div>
+	<div id="blog-container"> 
+		<jsp:include page="/mainContent.jsp" flush="false" />				
+	</div>
+	
+	<div id="footer">
+		풋터
+	</div>
 </body>
 </html>

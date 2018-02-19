@@ -5,25 +5,22 @@
 <head>
     <meta charset="utf-8" />
     <title>메인 틀</title>
-<script src="js/jquery.js"></script>
-<link rel="stylesheet" href="css/menubarcss.css" />
-<link rel="stylesheet" href="assets/css/mainmenu.css" />
-<link rel="stylesheet" href="css/what.css" />
-<script src="js/menubar.js"></script>
-<script src="assets/js/skel.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-  <script src="js/mainboot.js"></script>
-  <script src="js/pwstrength.js"></script>
-  <link rel="stylesheet" href="css/mainboot.css">
-<script src="js/mainCustom.js"></script>
-</head>
 </head>
 <body>
     <div id="blog-header-container">
-        <img alt="보여랏" src="main_img.jpg" width="100%" height="300px">
+        <img alt="보여랏" src="images/bodam_logo.jpg" width="100%" height="400px" id="logo_backgrownd">
+        <div class="content" width="100%" id="header_logo_container">
+        <ul id="header_menu">
+        <li><a>Q & A</a></li>
+        <li><a>주문내역</a></li>
+        <li><a>장바구니</a></li>
+            <u:isLogin>
+           <li><a href="./member/logout">로그아웃</a></li>
+            </u:isLogin>
+        </ul>
+        </div>
     </div>
-    <div id="menu-container">
+    <div id="menu-container"> 
         <header id="header">
 						<h1><a href="#">itcrowd</a></h1>
 						<nav class="links">
@@ -53,33 +50,38 @@
 					<section id="menu">
 						<!-- Search -->
 						<u:isLogin>
-							<section>
+							<section id="profile_section">
+								<table width="100%" id="profile_table">
+									<tr>
+									<td width="25%%">
+									<img src="images/lion_profile.gif" width="60x" height="60px">
+									</td>
+									<td width="25%">누구누구님</td>
+									<td align="right" rowspan="2">
+									<img src="images/lion_profile.gif" width="45x" height="45px">
+									</td>
+									</tr>
+								</table>
 							</section>
 						<!-- Links -->
 							<section>
 								<ul class="links">
 									<li>
-										<a href="#">
-											<h3>Lorem ipsum</h3>
-											<p>Feugiat tempus veroeros dolor</p>
+										<a>
+										<img width="60x" height="60px" alt="" src="images/lion_profile.gif">
+										친구친구님
 										</a>
 									</li>
 									<li>
-										<a href="#">
-											<h3>Dolor sit amet</h3>
-											<p>Sed vitae justo condimentum</p>
+										<a>
+										<img width="60x" height="60px" alt="" src="images/lion_profile.gif">
+										친구친구님
 										</a>
 									</li>
 									<li>
-										<a href="#">
-											<h3>Feugiat veroeros</h3>
-											<p>Phasellus sed ultricies mi congue</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Etiam sed consequat</h3>
-											<p>Porta lectus amet ultricies</p>
+										<a>
+										<img width="60x" height="60px" alt="" src="images/lion_profile.gif">
+										친구친구님
 										</a>
 									</li>
 								</ul>
@@ -104,16 +106,6 @@
 							</section>
 						</u:notLogin>
 					</section>
-    </div>
-    
-    <!-- content start -->
-    <div id="blog-container"> <!-- content container -->
-    </div> <!-- content container -->
-<div id="footer"> <!-- footer시작 -->
-	footer 설정 나중에
-</div> 
-
-
 <div id="modal_container">
 <!-- The Modal1 -->
   <div class="modal fade" id="myModal">
@@ -173,7 +165,7 @@
     </div>
   </div><!-- modal1 end -->
 </div>
-
+    </div>
 
 </body>
 
