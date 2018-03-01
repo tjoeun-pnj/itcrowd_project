@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="itcrowd">
+    <wb-module deploy-name="ItCrowd">
         <wb-resource deploy-path="/" source-path="/webapps" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="itcrowd"/>
-        <property name="java-output-path" value="/itcrowd/build/classes"/>
+        <property name="java-output-path" value="/ItCrowd/build/classes"/>
+        <property name="context-root" value="ItCrowd"/>
     </wb-module>
 </project-modules>
