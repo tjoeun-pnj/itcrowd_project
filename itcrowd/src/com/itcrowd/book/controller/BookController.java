@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import com.itcrowd.book.action.BookMainBestAction;
 import com.itcrowd.book.action.BookMainIndieAction;
 import com.itcrowd.book.action.BookMainNewAction;
-import com.itcrowd.member.action.MemberLoginAction;
+import com.itcrowd.book.action.IndieBookDetailAction;
+import com.itcrowd.book.action.IndieGradeAction;
+import com.itcrowd.book.action.IndieListAction;
 import com.itcrowd.util.url.Action;
 import com.itcrowd.util.url.ActionForward;
 
@@ -31,7 +33,6 @@ public class BookController extends HttpServlet{
 	}
 
 	private void process(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
-		
 		req.setCharacterEncoding("utf-8");
 		String requestURI = req.getRequestURI();
 		String contextPath = req.getContextPath();
@@ -59,8 +60,22 @@ public class BookController extends HttpServlet{
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-		} else if(command.equals("/login")) {
-			action = new MemberLoginAction();
+		} else if(command.equals("/indieList")) {
+			action = new IndieListAction();
+			try {
+				forward = action.execute(req, res);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else if(command.equals("/indieBookDetail")) {
+			action = new IndieBookDetailAction();
+			try {
+				forward = action.execute(req, res);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else if(command.equals("/indieGrade")) {
+			action = new IndieGradeAction();
 			try {
 				forward = action.execute(req, res);
 			} catch (Exception e) {
